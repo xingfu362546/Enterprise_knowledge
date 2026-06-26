@@ -6,8 +6,9 @@
 
 | 端 | 入口 | 说明 |
 |----|------|------|
-| 导航页 | `prototype/index.html` | 双击 `打开原型.bat` |
-| PC 门户 | `index.html` | 右下角胶囊按钮 → 右侧抽屉与小Q对话 |
+| 站点根路径 | `index.html` | 自动跳转原型导航（Cloudflare `_redirects`） |
+| 原型导航 | `prototype/index.html` | 双击 `打开原型.bat` |
+| PC 门户 | `portal/index.html` | 右下角胶囊按钮 → 右侧抽屉与小Q对话 |
 | 小程序首页 | `miniapp/home.html` | 卡通小Q浮层入口（闲置后缩至边缘） |
 | 小程序聊天 | `miniapp/kb-chat.html` | 全屏问答页，含快捷问题与文档引用 |
 
@@ -24,3 +25,12 @@
 ## 文档
 
 - 设计决策：`docs/DESIGN_SESSION.md`
+
+## Cloudflare Pages
+
+| 配置项 | 值 |
+|--------|-----|
+| Build output directory | `/`（仓库根目录） |
+| Build command | （留空） |
+
+根路径 `/` 经 `_redirects` 与 `index.html` 跳转至 `prototype/index.html`（原型导航）。
