@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>企业知识库 · 原型导航</title>
+  <link rel="stylesheet" href="../assets/portal.css" />
+  <style>
+    .hub { max-width: 880px; margin: 0 auto; padding: 40px 24px 60px; }
+    .hub h1 { font-size: 26px; margin: 0 0 8px; }
+    .hub p { color: var(--portal-text-muted); margin: 0 0 28px; }
+    .hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+    .hub-card {
+      display: block; padding: 20px; background: #fff; border: 1px solid var(--portal-border);
+      border-radius: 10px; text-decoration: none; color: inherit;
+    }
+    .hub-card:hover { border-color: #f5a623; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+    .hub-card h3 { margin: 0 0 6px; font-size: 15px; }
+    .hub-card span { font-size: 12px; color: var(--portal-text-muted); }
+    .hub-section { margin-top: 32px; }
+    .hub-section h2 { font-size: 15px; color: var(--portal-text-secondary); margin: 0 0 12px; }
+  </style>
+</head>
+<body>
+  <div class="hub">
+    <h1>企业知识库 · 智能问答原型</h1>
+    <p>小Q 助手：PC 抽屉 + 小程序卡通入口。</p>
+    <div class="hub-grid">
+      <a class="hub-card" href="../index.html">
+        <h3>PC 门户首页</h3>
+        <span>右下角入口 → 小Q 抽屉聊天</span>
+      </a>
+      <a class="hub-card" href="../miniapp/home.html">
+        <h3>小程序 · 员工首页</h3>
+        <span>卡通小Q浮层（自动缩边）</span>
+      </a>
+      <a class="hub-card" href="../miniapp/kb-chat.html">
+        <h3>小程序 · 小Q 聊天</h3>
+        <span>快捷问题 + 文档引用</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

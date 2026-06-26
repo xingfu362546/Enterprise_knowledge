@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>企业知识库 · 6Q教育</title>
+  <link rel="stylesheet" href="../assets/6q-theme.css" />
+  <link rel="stylesheet" href="../assets/common.css" />
+  <link rel="stylesheet" href="../assets/mp-kb.css" />
+</head>
+<body style="background:#e8e8e8">
+  <div class="mp-device">
+    <div class="mp-screen mp-screen--chat">
+      <div class="mp-capsule" aria-hidden="true"></div>
+      <div class="mp-subnav">
+        <button class="back" type="button" onclick="location.href='home.html'">‹</button>
+        <div class="title">小Q · 企业知识库</div>
+      </div>
+      <div class="mp-kb-chat-body" id="mp-kb-chat-body"></div>
+      <footer class="mp-kb-chat-foot">
+        <div class="mp-kb-input-row">
+          <textarea class="mp-kb-input" id="mp-kb-input" rows="1" placeholder="和小Q聊天…"></textarea>
+          <button type="button" class="mp-kb-send" id="mp-kb-send" aria-label="发送">
+            <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="../assets/mp-kb-chat.js"></script>
+  <script>initMpKbChat();</script>
+</body>
+</html>

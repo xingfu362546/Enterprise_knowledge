@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>月度绩效考核 · 填写</title>
+  <link rel="stylesheet" href="../assets/6q-theme.css" />
+  <link rel="stylesheet" href="../assets/common.css" />
+  <link rel="stylesheet" href="../assets/mp-perf.css" />
+</head>
+<body style="background:#e8e8e8">
+  <div class="mp-device">
+    <div class="mp-screen">
+      <div class="mp-capsule" aria-hidden="true"></div>
+      <div class="mp-subnav">
+        <button class="back" type="button" onclick="location.href='task-list.html'">‹</button>
+        <div class="title">2026年5月 · 月度</div>
+      </div>
+
+      <div class="stepper-wrap" id="stepper"></div>
+
+      <div class="wizard-body">
+        <div class="header-readonly" id="form-header"></div>
+        <div id="wizard-content"></div>
+      </div>
+
+      <div class="wizard-footer">
+        <button type="button" class="btn" id="btn-prev">上一步</button>
+        <button type="button" class="btn btn-primary" id="btn-next">下一步</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/frame.js"></script>
+  <script src="../assets/employee-past-copy.js"></script>
+  <script src="../assets/perf-score-format.js"></script>
+  <script src="../assets/perf-kr-hierarchy.js"></script>
+  <script src="../assets/wizard.js"></script>
+  <script>
+    initMonthlyWizard({
+      storageKey: 'perf-monthly-miniapp',
+      currentPeriodId: 'm202604',
+      onSubmit: function() { location.href = 'task-list.html'; },
+    });
+  </script>
+</body>
+</html>

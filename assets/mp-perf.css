@@ -1,0 +1,283 @@
+/* 小程序 · 绩效模块精细化样式 */
+
+.mp-subnav {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #f8fdf9 0%, #fff 100%);
+  border-bottom: 1px solid #e8e8e8;
+  padding: 12px 16px;
+  flex-shrink: 0;
+}
+.mp-subnav .title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.mp-segment {
+  display: flex;
+  margin: 12px 16px 0;
+  padding: 3px;
+  background: #ebebeb;
+  border-radius: 10px;
+  gap: 2px;
+}
+.mp-segment a {
+  flex: 1;
+  text-align: center;
+  padding: 8px 4px;
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+  border-radius: 8px;
+  position: relative;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.mp-segment a.is-active {
+  background: #fff;
+  color: var(--mp-green-3);
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.mp-segment-badge {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  background: #ff4d4f;
+  color: #fff;
+  font-size: 10px;
+  font-style: normal;
+  border-radius: 8px;
+  line-height: 16px;
+}
+
+.mp-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 12px 16px 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+.mp-banner-icon { font-size: 16px; flex-shrink: 0; line-height: 1.4; }
+.mp-banner-blue { background: #e6f4ff; border: 1px solid #bae0ff; color: #0958d9; }
+.mp-banner-orange { background: #fff7e6; border: 1px solid #ffd591; color: #ad6800; }
+.mp-banner-green { background: #f6ffed; border: 1px solid #b7eb8f; color: #389e0d; }
+
+.mp-task-list {
+  padding: 12px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mp-task-card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mp-task-card-row .mp-task-copy-btn {
+  align-self: stretch;
+  width: 100%;
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+/* 填表页 · 复制往期（小程序窄屏） */
+.mp-device .wizard-body {
+  padding: 0 12px 12px;
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.mp-device .wizard-copy-bar {
+  margin: 0 0 10px;
+  padding: 10px;
+  gap: 8px;
+}
+.mp-device .wizard-copy-bar .btn-copy-past {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  text-align: center;
+}
+.mp-device .wizard-copy-bar__tag {
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+}
+.mp-device .stepper-wrap {
+  padding: 10px 10px 8px;
+}
+.mp-device .stepper-blocks {
+  margin-bottom: 8px;
+}
+.mp-device .step-block + .step-block {
+  margin-left: 4px;
+}
+.mp-device .step-block-name {
+  font-size: 10px;
+  line-height: 1.25;
+}
+.mp-device .step-block-dots {
+  gap: 2px;
+}
+.mp-device .step-dot {
+  width: 18px;
+  height: 18px;
+  font-size: 9px;
+}
+
+.mp-device .header-readonly {
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 12px;
+  padding: 10px;
+}
+
+.mp-task-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 12px;
+  background: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04);
+  border: 1px solid #f0f0f0;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.mp-task-card:active {
+  transform: scale(0.985);
+}
+
+.mp-task-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.mp-task-icon--month { background: linear-gradient(135deg, #69b1ff, #1890ff); }
+.mp-task-icon--quarter { background: linear-gradient(135deg, #95de64, #52c41a); }
+
+.mp-task-body { flex: 1; min-width: 0; }
+.mp-task-body h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.mp-task-meta { margin: 0 0 6px; font-size: 12px; color: #888; }
+.mp-task-deadline {
+  display: inline-block;
+  font-size: 11px;
+  color: #999;
+  background: #f5f5f5;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.mp-task-hint { display: block; margin-top: 6px; font-size: 11px; color: #d48806; }
+
+.mp-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+.mp-tag-blue { background: #e6f4ff; color: #0958d9; }
+.mp-tag-orange { background: #fff7e6; color: #d48806; }
+.mp-tag-green { background: #f6ffed; color: #389e0d; }
+.mp-tag-gray { background: #f5f5f5; color: #888; }
+
+.mp-task-arrow { font-size: 20px; color: #ccc; flex-shrink: 0; }
+
+.mp-empty { text-align: center; padding: 48px 24px; color: #999; }
+.mp-empty-icon { font-size: 40px; margin-bottom: 12px; opacity: 0.6; }
+
+.mp-readonly-banner {
+  margin: 12px 16px;
+  padding: 10px 12px;
+  background: #fffbe6;
+  border: 1px solid #ffe58f;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #ad6800;
+}
+.mp-readonly-section {
+  margin: 0 16px 12px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+.mp-readonly-section h3 {
+  margin: 0;
+  padding: 12px 14px;
+  font-size: 14px;
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+}
+.mp-readonly-row {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 13px;
+}
+.mp-readonly-row:last-child { border-bottom: none; }
+.mp-readonly-row label {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 4px;
+}
+.mp-readonly-row p { margin: 0; color: #333; line-height: 1.5; }
+
+.mp-task-card--disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+}
+.mp-task-card--overdue-locked {
+  opacity: 0.55;
+  background: #f5f5f5;
+  border-color: #e8e8e8;
+  box-shadow: none;
+}
+.mp-task-card--overdue-locked h4,
+.mp-task-card--overdue-locked .mp-task-meta {
+  color: #999;
+}
+.mp-task-icon--muted {
+  background: linear-gradient(135deg, #d9d9d9, #bfbfbf) !important;
+}
+.mp-task-card--overdue-unlocked {
+  border-color: #91d5ff;
+  background: #fafcff;
+}
+.mp-task-hint--ok {
+  color: #0958d9 !important;
+}
+.mp-task-card--disabled:active { transform: none; }
+  padding: 0 16px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+#role-tabs.mp-role-tabs button {
+  flex: 1;
+  padding: 13px 8px;
+  font-size: 14px;
+}

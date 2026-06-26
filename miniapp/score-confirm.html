@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>确认评分</title>
+  <link rel="stylesheet" href="../assets/6q-theme.css" />
+  <link rel="stylesheet" href="../assets/common.css" />
+  <link rel="stylesheet" href="../assets/mp-perf.css" />
+</head>
+<body>
+  <div class="mp-screen">
+    <div class="mp-subnav">
+      <button class="back" type="button" onclick="history.back()">‹</button>
+      <span class="title">确认评分</span>
+    </div>
+    <div class="mp-page-body" id="confirm-body"></div>
+  </div>
+  <script src="../assets/perf-workflow.js"></script>
+  <script src="../assets/perf-score-format.js"></script>
+  <script src="../assets/perf-score-summary.js"></script>
+  <script src="../assets/score-confirm.js"></script>
+  <script>
+    var role = new URLSearchParams(location.search).get('role') || 'employee';
+    ScoreConfirm.initPage({ role: role, platform: 'miniapp' });
+  </script>
+</body>
+</html>

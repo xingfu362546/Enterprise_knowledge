@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>任务进度</title>
+  <link rel="stylesheet" href="../assets/6q-theme.css" />
+  <link rel="stylesheet" href="../assets/common.css" />
+  <link rel="stylesheet" href="../assets/mp-perf.css" />
+</head>
+<body>
+  <div class="mp-screen">
+    <div class="mp-subnav">
+      <button class="back" type="button" onclick="location.href='task-list.html'">‹</button>
+      <span class="title" id="progress-title">任务进度</span>
+    </div>
+    <div class="mp-page-body">
+      <div id="progress-steps"></div>
+      <div id="progress-detail" class="mp-progress-detail"></div>
+      <div id="progress-actions" style="margin-top:16px"></div>
+    </div>
+    <nav id="mp-tabbar" class="mp-tabbar"></nav>
+  </div>
+  <script src="../assets/frame.js"></script>
+  <script src="../assets/perf-workflow.js"></script>
+  <script src="../assets/mp-tasks.js"></script>
+  <script>
+    renderMpTabbar('home');
+    MpTasks.initTaskProgressPage();
+  </script>
+</body>
+</html>
