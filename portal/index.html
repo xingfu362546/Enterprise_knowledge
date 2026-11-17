@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>首页 · 6Q 门户</title>
   <link rel="stylesheet" href="../assets/portal.css" />
+  <link rel="stylesheet" href="../assets/oa-assistant.css" />
 </head>
 <body>
   <div class="portal-app">
@@ -45,7 +46,8 @@
       <button class="portal-subbar-btn" type="button" data-placeholder>+ 获取最新门户</button>
     </div>
 
-  <main class="portal-main">
+  <main class="portal-main portal-home">
+    <div class="portal-home-feed">
     <section class="portal-section">
       <div class="portal-section-head">个人信息栏目</div>
       <div class="portal-section-body">
@@ -146,56 +148,26 @@
         </table>
       </div>
     </section>
+    </div>
+
+    <div class="oa-assist-backdrop" id="oa-assist-backdrop" hidden></div>
+    <aside class="oa-assist" id="oa-assist" aria-label="AI智能助手">
+      <header class="oa-assist__bar">
+        <div class="oa-assist__head-main">
+          <span class="oa-assist__brand">AI</span>
+          <div>
+            <strong>AI智能助手</strong>
+            <p class="oa-assist__sub" id="oa-assist-sub">选择一个智能体开始对话</p>
+          </div>
+        </div>
+        <button type="button" class="oa-assist__collapse" id="oa-assist-collapse" aria-label="关闭助手">×</button>
+      </header>
+      <div class="oa-assist__body" id="oa-assist-body"></div>
+    </aside>
   </main>
   </div>
 
-  <!-- 小Q 知识库入口 -->
-  <div class="kb-fab-wrap" id="kb-fab-wrap">
-    <div class="kb-fab-hint" id="kb-fab-hint">
-      不懂制度？点我查 <strong>企业知识库</strong>
-      <button type="button" class="kb-fab-hint-close" id="kb-fab-hint-close" aria-label="关闭提示">×</button>
-    </div>
-    <div class="kb-fab-inner">
-      <div class="kb-fab-ripples" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
-      <button type="button" class="kb-fab" id="kb-fab" aria-label="打开小Q企业知识库">
-        <span class="kb-fab-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17a1 1 0 001 1h6a1 1 0 001-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm-1 13v2h2v-2h-2zm0-11a5 5 0 015 5c0 1.77-.93 3.33-2.33 4.22-.4.26-.67.7-.67 1.21V15h-4v-1.57c0-.51-.27-.95-.67-1.21A4.99 4.99 0 017 9a5 5 0 015-5z"/></svg>
-        </span>
-        <span class="kb-fab-text">
-          <span class="kb-fab-title">企业知识库</span>
-          <span class="kb-fab-sub">查 SOP · 岗位规则</span>
-        </span>
-      </button>
-    </div>
-  </div>
-
-  <!-- 小Q 聊天抽屉 -->
-  <div class="kb-overlay" id="kb-overlay"></div>
-  <aside class="kb-drawer" id="kb-drawer" role="dialog" aria-label="小Q企业知识库">
-    <header class="kb-drawer-head">
-      <h2 class="kb-drawer-title">
-        <span class="kb-drawer-title-icon">Q</span>
-        小Q · 企业知识库
-      </h2>
-      <button type="button" class="kb-drawer-close" id="kb-drawer-close" aria-label="关闭">×</button>
-    </header>
-    <div class="kb-chat-body" id="kb-chat-body"></div>
-    <footer class="kb-drawer-foot">
-      <div class="kb-input-wrap">
-        <textarea class="kb-input" id="kb-input" rows="1" placeholder="和小Q聊天…"></textarea>
-        <div class="kb-input-actions">
-          <button type="button" class="kb-attach-btn" title="附件（原型占位）" disabled>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 6v11.5a4 4 0 01-8 0V5a2.5 2.5 0 015 0v10.5a1 1 0 01-2 0V6H10v9.5a2.5 2.5 0 005 0V5a4 4 0 00-8 0v12.5a5.5 5.5 0 0011 0V6h-1.5z"/></svg>
-          </button>
-          <button type="button" class="kb-send-btn" id="kb-send-btn" aria-label="发送">
-            <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-          </button>
-        </div>
-      </div>
-    </footer>
-  </aside>
+  <button type="button" class="oa-assist-launcher" id="oa-assist-launcher" hidden>AI智能助手</button>
 
   <script>
     document.querySelectorAll('[data-placeholder]').forEach(function (el) {
@@ -205,6 +177,6 @@
     });
     document.querySelector('.portal-modules a:first-child').classList.add('is-active');
   </script>
-  <script src="../assets/kb-chat.js"></script>
+  <script src="../assets/oa-assistant.js"></script>
 </body>
 </html>

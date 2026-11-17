@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI智能助手 · 6Q教育</title>
+  <link rel="stylesheet" href="../assets/6q-theme.css" />
+  <link rel="stylesheet" href="../assets/common.css" />
+  <link rel="stylesheet" href="../assets/oa-assistant.css" />
+</head>
+<body style="background:#e8e8e8">
+  <div class="mp-device">
+    <div class="mp-screen mp-screen--chat">
+      <div class="mp-capsule" aria-hidden="true"></div>
+      <header class="mp-assist-bar">
+        <button class="mp-round" type="button" onclick="location.href='home.html'" aria-label="返回">‹</button>
+        <div class="mp-assist-brand">
+          <span class="mp-assist-logo">Q</span>
+          <span id="mp-assist-name">小Q</span>
+        </div>
+        <button class="mp-round" id="mp-assist-menu" type="button" aria-label="打开技能">☰</button>
+      </header>
+      <aside class="oa-assist oa-assist--mini" id="oa-assist" data-layout="mini" aria-label="AI智能助手">
+        <div class="oa-assist__body" id="oa-assist-body"></div>
+      </aside>
+    </div>
+  </div>
+  <script src="../assets/oa-assistant.js"></script>
+</body>
+</html>

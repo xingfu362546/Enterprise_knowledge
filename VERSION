@@ -1,0 +1,14 @@
+v1.1.0
+2026-11-17
+
+内容：
+- PC 门户 AI 智能助手改为居中大浮层（90vw × 88vh），左侧智能体列表 + 右侧对话
+- 新增学员数据查询智能体：复训有礼名单查询与 Excel 导出
+- 新增六个学员数据查询场景：学员档案、参与期数、签到明细、支付明细、场次名单、课程场次
+- 新增 mcp_bridge.py：本机门户到本体 MCP 的只读桥接，含 /api/students/* 接口
+- 新增 miniapp/assistant.html：小程序端智能助手页
+
+入口保持：
+- 站点根路径 index.html
+- PC 门户 portal/index.html
+- 原型导航 prototype/index.html
